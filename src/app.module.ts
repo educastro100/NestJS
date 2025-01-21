@@ -10,6 +10,7 @@ import { AddressModule } from './address/address.module';
 import { StateEntity } from './state/entities/state.entity';
 import { CityEntity } from './city/entities/city.entity';
 import { CacheModule } from './cache/cache.module';
+import { AddressEntity } from './address/entities/address.entity';
 
 @Module({
   imports: [
@@ -25,7 +26,7 @@ import { CacheModule } from './cache/cache.module';
       username: process.env.DB_USERNAME,
       // synchronize: true, // Sincroniza o banco de dados com as entidades
       // entities: [`${__dirname}/**/*.entity{.ts,.js}`], // Identifica todos os arquivos de entidade no projeto
-      entities: [UserEntity, StateEntity, CityEntity],
+      entities: [UserEntity, StateEntity, CityEntity, AddressEntity],
       migrations: ['dist/migration/*.js'],
       migrationsRun: true,
     }),

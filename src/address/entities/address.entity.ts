@@ -29,7 +29,7 @@ export class AddressEntity {
      * The number of the address.
      */
     @Column({ name: 'number', nullable: false })
-    numberAdress: string;
+    numberAddress: number;
 
     /**
      * The postal code (CEP) of the address.
